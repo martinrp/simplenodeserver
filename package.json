@@ -1,0 +1,22 @@
+{
+  "name": "simplenodeserver",
+  "version": "1.0.0",
+  "description": "Simple node server that accepts GET/POST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinrp/simplenodeserver.git"
+  },
+  "author": "Martin R P",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinrp/simplenodeserver/issues"
+  },
+  "engines": {
+    "node": "5.10.1"
+  },
+  "homepage": "https://github.com/martinrp/simplenodeserver#readme"
+}
