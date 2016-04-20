@@ -3,7 +3,7 @@
 let UserLang = require('./user-language');
 
 // Ideally use template engine or injext into a html file rather than just ``
-function getBaseHtml(req, addHtml) {
+function getHtml(req, addHtml) {
     let language = UserLang.getPrimaryLang(req.headers['accept-language']);
     addHtml = (typeof addHtml === 'string') ? addHtml : '';
 
@@ -15,14 +15,14 @@ function getBaseHtml(req, addHtml) {
     ${addHtml}
     `;
 
-    return _getFinalHtml(html);
+    return _injectIntoContainerHtml(html);
 }
 
 function getNoPostVarHtml(content){
-    return _getFinalHtml(content);
+    return _injectIntoContainerHtml(content);
 }
 
-function _getFinalHtml(content){
+function _injectIntoContainerHtml(content){
      var html = `
     <!DOCTYPE html>
     <html>
@@ -38,6 +38,6 @@ function _getFinalHtml(content){
 }
 
 module.exports = {
-    getBaseHtml: getBaseHtml,
+    getHtml: getHtml,
     getNoPostVarHtml: getNoPostVarHtml
 }

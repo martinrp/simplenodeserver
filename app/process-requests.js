@@ -24,9 +24,9 @@ function processPost(req, res, callback) {
         postData = qs.parse(body);
         console.log('postData', postData);
 
-        if (postData.postVar){ 
+        if (postData.postVar){
             let addHtml = `<div><p>Your POST variable value: ${postData.postVar}</p></div>`;
-            let html = HtmlGen.getBaseHtml(req, addHtml);
+            let html = HtmlGen.getHtml(req, addHtml);
             callback(null, req, res, html);
         } else { 
             let err = new Error('422 : Unprocessable entity - data attribute postVar was not found');
@@ -40,7 +40,7 @@ function processGet(req, res, callback) {
     callback = (typeof callback === 'function') ? callback : function() {};
 
     // TODO: Process GET requests for files (html/css/js) and stream/pipe files back
-    let html = HtmlGen.getBaseHtml(req);
+    let html = HtmlGen.getHtml(req, null);
     callback(null, req, res, html);
 }
 
