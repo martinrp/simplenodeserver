@@ -14,3 +14,9 @@ npm install
 ```bash
 node index.js
 ```
+
+## Testing
+
+```bash
+mocha test
+```
