@@ -4,7 +4,7 @@
   "description": "Simple node server that accepts GET/POST",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,10 @@
   "engines": {
     "node": "5.10.1"
   },
-  "homepage": "https://github.com/martinrp/simplenodeserver#readme"
+  "homepage": "https://github.com/martinrp/simplenodeserver#readme",
+  "dependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.4.5",
+    "request": "2.72.0"
+  }
 }
