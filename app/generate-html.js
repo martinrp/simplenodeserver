@@ -2,7 +2,7 @@
 
 let UserLang = require('./user-language');
 
-// Ideally use template engine or injext into a html file rather than just ``
+// Ideally use template engine
 function getHtml(req, addHtml) {
     let language = UserLang.getPrimaryLang(req.headers['accept-language']);
     addHtml = (typeof addHtml === 'string') ? addHtml : '';
