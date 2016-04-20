@@ -7,12 +7,12 @@ let userLang    = require('../app/user-language.js');
 
 describe('App', function() {
     describe('Split languages', function () {
-        it('should return an array of 2 language sets', function () {
-            let testString = 'en-gb,en;q=0.8, ru;q=0.7';
+        it('should return an array with 4 languages', function () {
+            let testString = 'en-gb,en;q=0.8, ru;q=0.7, uk;q=0.3';
             let testArray = userLang.splitLangs(testString);
 
             expect(testArray).to.be.an('array');
-            expect(testArray).to.have.length(3);
+            expect(testArray).to.have.length(4);
         });
     });
 
