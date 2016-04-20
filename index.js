@@ -72,8 +72,9 @@ function _handleErrors(e, res){
         res.end();
     } else if (e.name === 'UnprocessableEntityError') {
         // Unprocessable entity
-        res.writeHead(422, {'Content-Type': 'text/plain'});
-        res.write(e + '\n');
+        let html = HtmlGen.getNoPostVarHtml(e.message);
+        res.writeHead(422, {'Content-Type': 'text/html'});
+        res.write(html);
         res.end();
     } else if (e.name === 'EntityTooLargeError') {
         // Request entity too large
