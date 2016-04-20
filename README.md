@@ -3,7 +3,7 @@ Simple node server that accepts GET/POST
 
 ## Installation
 
-For more information on setting up this project please refer to the React Redux Universal Hot boilerplate github page.
+To get the server running please run npm install before running.
 
 ```bash
 npm install
@@ -11,5 +11,6 @@ npm install
 
 ## Running Server
 
+```bash
 node index.js
-
+```
