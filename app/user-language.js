@@ -11,13 +11,13 @@ function getPrimaryLang (langs) {
 }
 
 function splitLangs (str) {
-    var item, q;
+    let item;
     let langs = [];
     if (!str) { return; }
 
     langs = (String(str)).split(',').reduce(function(p, c){
         let splitArr = c.split(';');
-        let lang = splitArr[0], q = splitArr[1];
+        let lang = splitArr[0];
         return p.concat(lang);
     }, []);
 

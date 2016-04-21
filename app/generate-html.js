@@ -23,7 +23,7 @@ function getNoPostVarHtml(content){
 }
 
 function _injectIntoContainerHtml(content){
-     var html = `
+    let html = `
     <!DOCTYPE html>
     <html>
         <head>
